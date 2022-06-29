@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Form</title>
+	</head>
+	<body>
+		<h1>Membership Form</h1>
+		<p>To register, please fill in your details below and click Send Details.</p>
+		<form action = "process_registration.php" method = "post">
+			First Name : <input type = "text" name = "fname"><br><br>
+			Last Name :  <input type = "text" name = "lname"><br><br>
+			Gender : 
+				Male <input type = "radio" name = "gender" value = "m">
+				Female	<input type = "radio" name = "gender" value = "f"><br><br>
+				
+			Which course are you following at UoJ? 
+			<select name = "course">
+			
+				<option>Computer Science</option>
+				<option>Physical Science</option>
+				<option>Biological Science</option>
+				
+			</select><br><br>
+			
+			Password : <input type = "password" name = "pword"><br><br>
+			<input type = "submit" name = "submit" value = "Submit">
+			<input type = "reset" name = "reset" value = "Reset"><br>
+		</form>
+	</body>
+</html>

@@ -1,93 +1,59 @@
-<html>
-	<head>
-		<title>Server Side Languages</title>
-	</head>
-	<body>
-		<?php
-			echo "Hello World <br>";
-			#This is a single Line Comment
-			
-			$my_variable = 7;
-			echo "The value is $my_variable";
-			
-			echo "<h2> PHP is fun !! </h2> <br>";
-			 
-			$var1 = "Web";
-			$var2 = "Technology";
-			echo $var1." ".$var2."<br>";
-			
-			$var3 = 6;
-			$var4 = 4;
-			$var5 = $var3 + $var4;
-			echo "The sum of $var3 and $var4 is $var5 <br>";
-			
-			print("I am the print statement<br>");
-			print "I am the print statement<br>";
-		?>
-		
-		<?php
-			#Defining a constant
-			define("my_constant",44);
-			
-			$x = "9";
-			print gettype($x)."<br>";
-			settype($x,"integer");
-			echo gettype($x)."<br>";
-			
-			echo is_int($x)."<br>"; 
-			
-			$marks = 89;
-			$result = "";
-			
-			#Conditional Statements
-			($marks >50) ? $result = "Pass" : $result ="Fail";
-			echo "$result.<br>" ;
-			
-			function sum($num = 8){
-				return 5 + $num ;
-			}
-			
-			echo sum(30)."<br>";
-			echo sum(),"<br>";
-			
-			$title = "Mr";
-			
-			function printName() {
-				$fname = "Roy";
-				$lname = "John";
-				global $title;  #Global variable declaration
-				print "$title $fname $lname";
-			}
-			
-			printName();
-			echo "<br>";
-			
-			
-			function add(){
-				$y =5;
-				static $sum =0;
-				$sum = $sum +$y;
-				return $sum;
-			}
-			
-			echo add() , "<br>";
-			echo add() , "<br>";
-			echo add() , "<br>";
-			
-			function Display(){
-				$evensum = 0; $oddsum =0;
-				for($i=0;$i<=30;$i++){
-					if($i%2 == 0){
-						$evensum += $i; 
-					}
-					else
-						$oddsum += $i;
-				}
-				echo "Sum of Even numbers is $evensum <br>";
-				echo "Sum of Odd Numbers is $oddsum ";
-			}
-			
-			Display();
-		?>
-	</body>
-</html>
+<?php 
+	$temp = array(1,5,3,4,6,9,10,7,8,2);
+	
+	function find_average($temp){
+		$sum = 0 ;
+		foreach($temp as $values){
+			$sum = $sum + $values ;
+		}
+		$average = $sum/sizeof($temp);
+		echo "The average is $average <br>";
+	}
+	
+	function find_lowest($temp,$num){
+		sort($temp);
+		/*for($i = 0 ;$i<$num;$i++){
+			echo $temp[$i]. ",";
+		}*/
+		print_r(array_slice($temp,0,$num));
+		echo "<br>";
+	}
+	
+	function find_highest($temp,$num){
+		$n = sizeof($temp)-1;
+		sort($temp);
+		print_r(array_slice($temp,$n-$num,$n));
+		echo "<br>";
+	}
+	
+	find_average($temp);
+	find_lowest($temp,3);
+	find_highest($temp,3);
+	
+	//Pointers in PHP
+	$arr = array(4,5,6,7,9);
+	echo current($arr)."<br>" ;
+	
+	echo key($arr)."<br>" ;
+	echo next($arr)."<br>" ;
+	echo key($arr)."<br>" ;
+	
+	echo prev($arr)."<br>" ;
+	echo key($arr)."<br>" ;
+	
+	echo end($arr)."<br>" ;
+	
+	echo current($arr)."<br>" ;
+	reset($arr) ;
+	echo current($arr)."<br>" ;
+	$myBooks = array(array("title"=>"The Grapes of Wrath","author"=>"John Steinbeck","pubYear" => 1939),array("title"=>"The trial","author"=>"John Steinbeck","pubYear" =>1959));
+	
+	print_r($myBooks[0]);
+	
+	echo "Today is ".date("y/m/d")."<br>";
+	echo "Today is ".date("y.m.d")."<br>";
+	echo "Today is ".date("y-m-d")."<br>";
+	echo "Today is ".date("I")."<br>";
+	
+	
+?>
