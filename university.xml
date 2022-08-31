@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE university[
+<!ELEMENT university (student+)>
+<!ELEMENT student (name,courseunit,year,message)>
+<!ATTLIST student reg_no CDATA #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT courseunit (ica1,ica2,ece)>
+<!ATTLIST courseunit id CDATA #FIXED "CSC210S3">
+<!ELEMENT ica1 (#PCDATA)>
+<!ELEMENT ica2 (#PCDATA)>
+<!ELEMENT ece (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT message (#PCDATA)>
+<!ENTITY message "I am from DCS">
+]>
+
+<university>
+    <student reg_no="2015csc890">
+        <name>John</name>
+        <courseunit id = "CSC210S3">
+            <ica1>75</ica1>
+            <ica2>71</ica2>
+            <ece>80</ece>
+        </courseunit>
+        <year>second</year>
+        <message>&message;</message>
+    </student>
+
+    <student reg_no="2015csc077">
+        <name>Kamal</name>
+        <courseunit id = "CSC210S3">
+            <ica1>65</ica1>
+            <ica2>67</ica2>
+            <ece>98</ece>
+        </courseunit>
+        <year>second</year>
+        <message>&message;</message>
+    </student>
+
+    <student reg_no="2015csc899">
+        <name>James</name>
+        <courseunit id = "CSC210S3">
+            <ica1>44</ica1>
+            <ica2>77</ica2>
+            <ece>85</ece>
+        </courseunit>
+        <year>second</year>
+        <message>&message;</message>
+    </student>
+</university>
