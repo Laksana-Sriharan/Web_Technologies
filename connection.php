@@ -1,12 +1,14 @@
 <?php
-
-	$host = "localhost";
-	$user = "root";
+	$servername = "localhost";
+	$username = "root";
 	$password = "";
-	$dbname = "member_registration";
+	$dbname = "VaccinationDB";
 	
-	$con = mysqli_connect($host, $user, $password, $dbname);
-	if($con->connect_error){
-		die("Connection Failed : ".$con->connect_error);
+	$conn = mysqli_connect($servername,$username,$password,$dbname);
+	
+	if(!$conn){
+		die("Connection failed!!".mysqli_connect_error());
 	}
+	
+
 ?>

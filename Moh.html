@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Add Moh </title>
+	<style>
+		.first{
+			background-color:#080D57;
+			color:white;
+			font-size:16px;
+			font-family:sans-serif;
+			font-weight:bold;
+		}
+		.main{
+			border:2px solid black;
+			padding-bottom:2px;
+			margin:100px;
+			font-weight:bold;
+		}
+		
+		input[type = "submit"],input[type = "reset"]{
+			background-color:#54B1DF;
+			border:none;
+			border-radius:5px;
+			color:black;
+			cursor:pointer;
+			padding:8px 16px;
+			margin: 4px 2px;
+		}
+		
+	</style>
+</head>
+<body align = "center">
+	<form method = "post" action = "insert.php">
+		<div class = "main">
+				<div class = "first">
+					<p align = "left">Admin</p>
+					<pre align="right"><a><u> MOHs  </u></a><a> Logout </a></pre>
+				
+				</div>
+			MOH ID : <input type = "text" name = "id" required /><br><br>
+			Name of the MOH : <input type = "text" name = "name" required /><br><br>
+			First Name : <input type = "text" name = "fname" required /><br><br>
+			Last Name : <input type = "text" name = "lname" required/><br><br>
+			District : <input type = "text" name = "district" required/><br><br>
+			Address : <input type = "text" name = "address" required/><br><br>
+			Mobile Number : <input type = "tel" name = "mobno" pattern ="[0-9]{3}-[0-9]{3}-[0-9]{4}" required/><br><br>
+			Password : <input type = "password" name = "pwd"  required /><br><br>
+			
+			<input type = "submit" name = "submit" value = "Add" />
+			<input type = "reset" name = "reset" value = "Clear"/>
+			
+		</div>
+	</form>
+</body>
+</html>

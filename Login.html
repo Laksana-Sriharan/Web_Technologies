@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title>Login</title>
+	<style>
+		.first{
+			background-color:#080D57;
+			color:white;
+			font-size:30px;
+			font-family:sans-serif;
+			font-weight:bold;
+		}
+		.main{
+			border:2px solid black;
+			padding-bottom:5px;
+			padding-top:0 spx;
+			margin:50px;
+			font-weight:bold;
+		}
+		
+		input[type = "submit"],input[type = "reset"]{
+			background-color:#54B1DF;
+			border:none;
+			border-radius:5px;
+			color:black;
+			cursor:pointer;
+			padding:8px 16px;
+			margin: 4px 2px;
+		}
+		.main a {
+			color:brown;
+		}
+		
+	</style>
+</head>
+<body align = "center">
+	<form method = "post" action = "Login.php">
+		<div class = "main">
+				<div class = "first">
+					<p align = "left">Vaccination System</p>
+				
+				</div>
+			Username : <input type = "text" name = "uname" required /><br><br>
+			Password : <input type = "password" name = "pwd"  required /><br><br>
+			<a href = "Reset_password.html"><u>Reset Password</u></a> <br><br>
+			<input type = "submit" name = "submit" value = "Login" />
+		
+			
+		</div>
+	</form>
+</body>
+</html>
