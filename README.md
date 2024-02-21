@@ -36,5 +36,4 @@ Contributions to this repository are welcome! If you have additional examples, i
 <b>Credits:</b>
 These codes were developed as part of the Web Technology course curriculum. Credit goes to the instructors and authors of the course materials.
 
-
-Feel free to customize this description to better fit the specific examples and projects you've covered in your semester. This description provides an overview of the contents of the repository, how users can utilize the provided codes, and guidelines for contributing to the repository.
+Feel free to explore this repository , Happy Coding and Exploring !!
